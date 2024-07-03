@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wonder | DevTune FM</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="website icon" type="png" href="" />
+    <script type="module" defer src="script.js"></script>
+  </head>
+  <body>
+    <div id="background_img_comtainer"></div>
+    <div class="header">
+      <div id="Left_header">
+        <img class="station_logo" src="./controls/stations.png" />
+        <div class="selector_wrapper">
+          <div class="selectorBox">
+            <p class="select_name">Ambient station</p>
+            <div id="select_icon">
+              <img
+                class="dropDownArrow hidden_Down_Icon"
+                src="./controls/dropdown.png"
+                alt="dropDownIcon"
+              />
+              <img
+                class="dropUpArrow hidden_Up_Icon"
+                src="./controls/dropup.png"
+                alt="dropUpIcon"
+              />
+            </div>
+          </div>
+          <div class="dropDown_model hidden_dropdown">
+            <!-- <div class="tracks_title">Ambient station</div> -->
+          </div>
+        </div>
+      </div>
+
+      <div id="Right_header">
+        <img
+          class="setting_icon hidden_setting_icon"
+          src="./controls/settings.png"
+          alt="setting"
+        />
+        <img
+          class="info_icon hidden_info_icon"
+          src="./controls/info.png"
+          alt="infoIcon"
+        />
+      </div>
+      <div class="setting_model_box">
+        <p class="radio_setting">Radio Setting</p>
+        <p id="set_background">Set background:</p>
+        <div class="background_container">
+          <div class="background_img">
+            <img
+              class="img1"
+              src="./BackgroundImg/wallhaven-0w6j7q.jpg"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img2"
+              src="./BackgroundImg/wallhaven-eo19kw.jpg"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img3"
+              src="./BackgroundImg/wallhaven-j8m3py.jpg"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img4"
+              src="./BackgroundImg/wallhaven-6kv1ow.png"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img5"
+              src="./BackgroundImg/wallhaven-r2jygm.jpg"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img6"
+              src="./BackgroundImg/wallhaven-xl56rv.jpg"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img7"
+              src="./BackgroundImg/wallhaven-rd3jv7.jpg"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img8"
+              src="./BackgroundImg/wallhaven-eyx3pl.jpg"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img9"
+              src="./BackgroundImg/wallhaven-k9k3r1.jpg"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="background_img">
+            <img
+              class="img10"
+              src="./BackgroundImg/wallhaven-mpdz88.png"
+              alt="backgroundImage1"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <p class="background_switch">Switch background:</p>
+          <div id="switch_block">
+            <div class="On_station">
+              <input type="checkbox" />On station change
+            </div>
+            <div class="On_track"><input type="checkbox" />On track end</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="center_body">
+      <h1>DevTune FM</h1>
+      <h3>Ambient station</h3>
+      <div id="Track_status">
+        <img
+          id="priviousIcon"
+          src="./controls/previous.png"
+          alt="priviousIcon"
+        />
+        <img id="pauseIcon2" src="./controls/pause.png" alt="PauseIcon" />
+        <img id="playIcon2" src="./controls/play.png" alt="PlayIcon" />
+        <img id="nextIcon" src="./controls/next.png" alt="NextIcon" />
+      </div>
+      <div style="max-width: 600px">
+        <h3 class="Home_stationTitle__aUjkO" style="font-size: 14px">
+          Future Frequency - Transmission
+        </h3>
+      </div>
+    </div> -->
+
+    <div class="Footer">
+      <div id="Left_footer">
+        <img id="play_icon" src="./controls/play.png" alt="playIcon" />
+        <img id="pause_icon" src="./controls/pause.png" alt="pauseIcon" />
+        <p id="recent_play">Afterthought</p>
+      </div>
+      <div id="Right_footer">
+        <img
+          id="volume_icon"
+          src="./controls/volume.png
+        "
+          alt="volumeIcon"
+        />
+        <img
+          class="mute_icon"
+          src="./controls/mute.png
+        "
+          alt="volumeIcon"
+        />
+        <input id="range" type="range" alt="music_timer" />
+        <img id="recent_icon" src="./controls/recents.png" alt="recent_icon" />
+        <img id="repeat_icon" src="./controls/repeat.png" alt="repeat_Icon" />
+        <img
+          id="repeat_one_icon"
+          src="./controls/repeat-one.png"
+          alt="repeat_one_Icon"
+        />
+      </div>
+    </div>
+  </body>
+</html>
