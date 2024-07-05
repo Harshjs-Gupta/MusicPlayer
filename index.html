@@ -18,7 +18,7 @@
             <p class="select_name">Ambient station</p>
             <div id="select_icon">
               <img
-                class="dropDownArrow hidden_Down_Icon"
+                class="dropDownArrow"
                 src="./controls/dropdown.png"
                 alt="dropDownIcon"
               />
@@ -30,25 +30,17 @@
             </div>
           </div>
           <div class="dropDown_model hidden_dropdown">
-            <!-- <div class="tracks_title">Ambient station</div> -->
+            <!-- <div title = "Ambient" id=1836821754 class="tracks_title">Ambient station</div> -->
           </div>
         </div>
       </div>
 
       <div id="Right_header">
-        <img
-          class="setting_icon hidden_setting_icon"
-          src="./controls/settings.png"
-          alt="setting"
-        />
-        <img
-          class="info_icon hidden_info_icon"
-          src="./controls/info.png"
-          alt="infoIcon"
-        />
+        <img class="setting_icon" src="./controls/settings.png" alt="setting" />
+        <img class="info_icon" src="./controls/info.png" alt="infoIcon" />
       </div>
-      <div class="setting_model_box">
-        <p class="radio_setting">Radio Setting</p>
+      <div class="setting_model_box setting_model_hidden">
+        <p class="radio_setting">Radio Settings</p>
         <p id="set_background">Set background:</p>
         <div class="background_container">
           <div class="background_img">
@@ -141,14 +133,73 @@
               width="30px"
             />
           </div>
-          <p class="background_switch">Switch background:</p>
-          <div id="switch_block">
-            <div class="On_station">
-              <input type="checkbox" />On station change
-            </div>
-            <div class="On_track"><input type="checkbox" />On track end</div>
+        </div>
+        <p class="background_switch">Switch background:</p>
+        <div id="switch_block">
+          <div class="On_station">
+            <input type="checkbox" /> On station change
+          </div>
+          <div class="On_track"><input type="checkbox" /> On track end</div>
+        </div>
+        <p class="launch">Launch behaviour:</p>
+        <div id="behaviour">
+          <div class="last_station">
+            <input type="checkbox" /> Use last station
+          </div>
+          <div class="last_background">
+            <input type="checkbox" /> Use last background
           </div>
         </div>
+        <p class="keyboard">Keyboard shortcuts:</p>
+        <p class="shortcut">Left/Right - Switch station</p>
+        <p class="shortcut">Up/Down - Volume level</p>
+        <p class="shortcut">Space - Play/Pause</p>
+        <p class="shortcut">Nums - Background</p>
+        <p class="shortcut">M - Mute toggle</p>
+        <p class="shortcut">L - List toggle</p>
+        <p class="shortcut">R - Repeat track</p>
+        <p class="shortcut">S - Setting toggle</p>
+        <p class="shortcut">I - Info toggle</p>
+      </div>
+      <div class="about_model_box hidden_about_model">
+        <p id="about">About the radio</p>
+        <p id="info">
+          DevTunes FM has been visited 90666 times with 896860 tracks listened.
+          Launched in 2021.
+        </p>
+        <div id="about_music">
+          <p class="creator">The tracks are curated by</p>
+          <!-- <a class="author_name">Stan Kraus</a> -->
+        </div>
+        <div id="about_background_img">
+          Wallpapers from
+          <a class="wallhaven" href="https://wallhaven.cc/" target="_blank"
+            >Wallhaven</a
+          >. Icons from
+          <a class="flaticon" href="https://www.flaticon.com/" target="_blank"
+            >Flaticon</a
+          >.
+        </div>
+        <p id="about_app">
+          Written in JavaScript, audio source is
+          <a
+            class="music_api_address"
+            href="https://developers.soundcloud.com/docs/api/explorer/open-api"
+            target="_blank"
+            >SoundCloud API</a
+          >
+          . Hosted on
+          <a
+            class="hoistig_source_name"
+            href="https://vercel.com/"
+            target="_blank"
+            >Vercel</a
+          >.
+        </p>
+        <p id="suggestion_link">
+          Feature suggestions and other related stuff send to
+          <a id="email" href="#" target="_blank">hi@madza.dev</a>
+        </p>
       </div>
     </div>
 
@@ -174,32 +225,45 @@
 
     <div class="Footer">
       <div id="Left_footer">
-        <img id="play_icon" src="./controls/play.png" alt="playIcon" />
-        <img id="pause_icon" src="./controls/pause.png" alt="pauseIcon" />
+        <img class="play_icon" src="./controls/play.png" alt="playIcon" />
+        <img
+          class="pause_icon hidden_pause_Icon"
+          src="./controls/pause.png"
+          alt="pauseIcon"
+        />
         <p id="recent_play">Afterthought</p>
       </div>
       <div id="Right_footer">
         <img
-          id="volume_icon"
+          class="volume_icon"
           src="./controls/volume.png
         "
           alt="volumeIcon"
         />
         <img
-          class="mute_icon"
+          class="mute_icon mute_hidden"
           src="./controls/mute.png
         "
           alt="volumeIcon"
         />
         <input id="range" type="range" alt="music_timer" />
         <img id="recent_icon" src="./controls/recents.png" alt="recent_icon" />
-        <img id="repeat_icon" src="./controls/repeat.png" alt="repeat_Icon" />
         <img
-          id="repeat_one_icon"
+          class="repeat_icon"
+          src="./controls/repeat.png"
+          alt="repeat_Icon"
+        />
+        <img
+          class="repeat_one_icon hidden_repeat_one_Icon"
           src="./controls/repeat-one.png"
           alt="repeat_one_Icon"
         />
       </div>
     </div>
+    <div class="list_model_box hidden_list_model">
+      <p id="Privious_tracks_list">Previous tracks</p>
+      <p id="empty_list_message">The list is empty</p>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
