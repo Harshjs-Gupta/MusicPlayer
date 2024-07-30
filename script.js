@@ -35,3 +35,20 @@ const musicList = function () {
   }
 };
 listSelector.addEventListener("click", musicList);
+
+// Setting radio model Box
+const settingBtn = document.querySelector(".setting_icon");
+const settingBox = document.querySelector(".setting_model_box");
+
+settingBtn.addEventListener("click", function () {
+  if (settingBox.classList.contains("setting_model_hidden")) {
+    settingBox.classList.remove("setting_model_hidden");
+    aboutcontainer.classList.add("hidden_about_model");
+    titleModelBox.classList.add("hidden_dropdown");
+    downArrowBtn.classList.remove("hidden_down_Icon");
+    upArrowBtn.classList.add("hidden_Up_Icon");
+    listModelBox.classList.add("hidden_list_model");
+  } else {
+    settingBox.classList.add("setting_model_hidden");
+  }
+});
