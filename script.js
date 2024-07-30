@@ -61,3 +61,55 @@ const displayAuthorName = function (item) {
 };
 
 playList.forEach((item) => displayAuthorName(item));
+
+// Account model box
+const aboutcontainer = document.querySelector(".about_model_box");
+const infoBtn = document.querySelector(".info_icon");
+
+infoBtn.addEventListener("click", function () {
+  if (aboutcontainer.classList.contains("hidden_about_model")) {
+    aboutcontainer.classList.remove("hidden_about_model");
+    settingBox.classList.add("setting_model_hidden");
+    titleModelBox.classList.add("hidden_dropdown");
+    downArrowBtn.classList.remove("hidden_down_Icon");
+    upArrowBtn.classList.add("hidden_Up_Icon");
+    listModelBox.classList.add("hidden_list_model");
+  } else {
+    aboutcontainer.classList.add("hidden_about_model");
+  }
+});
+
+// Previous List  model box
+const listBtn = document.getElementById("recent_icon");
+const listModelBox = document.querySelector(".list_model_box");
+
+listBtn.addEventListener("click", function () {
+  //appear model box
+  if (listModelBox.classList.contains("hidden_list_model")) {
+    listModelBox.classList.remove("hidden_list_model");
+    titleModelBox.classList.add("hidden_dropdown");
+    downArrowBtn.classList.remove("hidden_down_Icon");
+    upArrowBtn.classList.add("hidden_Up_Icon");
+    aboutcontainer.classList.add("hidden_about_model");
+    settingBox.classList.add("setting_model_hidden");
+  } else {
+    listModelBox.classList.add("hidden_list_model");
+  }
+});
+
+////////////////////////////////////////
+//Change background
+const allImg = [
+  "img1",
+  "img2",
+  "img3",
+  "img4",
+  "img5",
+  "img6",
+  "img7",
+  "img8",
+  "img9",
+  "img10",
+];
+
+allImg.forEach((image) => changeBackground(image));
