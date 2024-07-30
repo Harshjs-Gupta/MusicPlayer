@@ -52,3 +52,12 @@ settingBtn.addEventListener("click", function () {
     settingBox.classList.add("setting_model_hidden");
   }
 });
+
+// map author name
+const nameContainer = document.getElementById("about_music");
+const displayAuthorName = function (item) {
+  const html = `<a class="author_name" href="${item.author_link}" target="_blank" title="${item.title}" id="${item.id}" url="${item.url}" author="${item.author}" author_link="${item.author_link}" >${item.author}, </a>`;
+  nameContainer.insertAdjacentHTML("beforeend", html);
+};
+
+playList.forEach((item) => displayAuthorName(item));
