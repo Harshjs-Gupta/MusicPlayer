@@ -1,0 +1,37 @@
+import { playList } from "./data.js";
+import { changeBackground } from "./backgroundChange.js";
+
+// console.log(playList);
+// console.log(playList.map((t) => t.title).join(", "));
+
+const downArrowBtn = document.querySelector(".dropDownArrow");
+const listSelector = document.querySelector(".selectorBox");
+const upArrowBtn = document.querySelector(".dropUpArrow");
+const titleModelBox = document.querySelector(".dropDown_model");
+const trackscontainer = document.querySelector(".tracks_title");
+const closeModel = document.querySelector(".overlay");
+
+const displayTracksList = function (item) {
+  const html = `<div class="tracks_title" title="${item.title}" id="${item.id}" url="${item.url}" author="${item.author}" author_link="${item.author_link}" >${item.title}</div>`;
+  titleModelBox.insertAdjacentHTML("beforeend", html);
+};
+
+playList.forEach((item) => displayTracksList(item));
+
+// Track list model Box
+const musicList = function () {
+  //   console.log("Hello");
+  if (titleModelBox.classList.contains("hidden_dropdown")) {
+    titleModelBox.classList.remove("hidden_dropdown");
+    downArrowBtn.classList.add("hidden_down_Icon");
+    upArrowBtn.classList.remove("hidden_Up_Icon");
+    aboutcontainer.classList.add("hidden_about_model");
+    settingBox.classList.add("setting_model_hidden");
+    listModelBox.classList.add("hidden_list_model");
+  } else {
+    titleModelBox.classList.add("hidden_dropdown");
+    downArrowBtn.classList.remove("hidden_down_Icon");
+    upArrowBtn.classList.add("hidden_Up_Icon");
+  }
+};
+listSelector.addEventListener("click", musicList);
