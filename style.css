@@ -475,6 +475,10 @@ body {
   display: none;
 }
 
+.download_Icon {
+  height: 30px;
+}
+
 #recent_icon {
   height: 20px;
   cursor: pointer;
@@ -550,7 +554,11 @@ body {
   display: none;
 }
 
-@media (max-width: 700px) {
+#audio {
+  display: none;
+}
+
+/* @media (max-width: 700px) {
   #center_body {
     display: block;
   }
@@ -577,25 +585,6 @@ body {
     display: none;
   }
 
-  /* .dropDown_model {
-    height: calc(-160px + 100dvh);
-    width: 100%;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    padding: 10px 20px 10px 20px;
-    margin-top: 20px;
-    overflow: auto;
-    display: grid;
-    background-color: black;
-    z-index: 1;
-  }
-
-  .tracks_title {
-    width: 100%;
-    display: grid;
-    place-content: center;
-  } */
 
   .dropUpArrow {
     height: 20px;
@@ -604,12 +593,6 @@ body {
     margin-left: 50px;
   }
 
-  /* .setting_model_box {
-    background-color: black;
-    z-index: 1;
-  } */
-
-  /* Here we add main container for responsive web page*/
 
   h1 {
     font-size: 40px;
@@ -686,4 +669,4 @@ body {
   #recent_icon {
     margin-right: 40px;
   }
-}
+} */
