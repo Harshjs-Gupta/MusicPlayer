@@ -35,10 +35,9 @@
         <!-- <div title = "Ambient" id=1836821754 class="tracks_title">Ambient station</div> -->
       </div>
 
-      <!-- <audio
-        controls
-        src="https://soundcloud.com/epigenes1s/sets/lo-fi"
-      ></audio> -->
+      <audio id="audio" controls>
+        <source src="./music.mp3" type="audio/mp3" />
+      </audio>
 
       <div id="Right_header">
         <img class="setting_icon" src="./controls/settings.png" alt="setting" />
@@ -237,13 +236,16 @@
     <div class="Footer">
       <div id="Left_footer">
         <img class="play_icon" src="./controls/play.png" alt="playIcon" />
+
         <img
           class="pause_icon hidden_pause_Icon"
           src="./controls/pause.png"
           alt="pauseIcon"
         />
+
         <p id="recent_play">Afterthought</p>
       </div>
+
       <div id="Right_footer">
         <img
           class="volume_icon"
@@ -251,19 +253,32 @@
         "
           alt="volumeIcon"
         />
+
         <img
           class="mute_icon mute_hidden"
           src="./controls/mute.png
         "
           alt="volumeIcon"
         />
+
         <input id="range" type="range" alt="music_timer" />
+
+        <!-- <a href="audio" download="music.mp3">
+          <img
+            class="download_Icon"
+            src="./controls/download.png"
+            alt="downloadIcon"
+          />
+        </a> -->
+
         <img id="recent_icon" src="./controls/recents.png" alt="recent_icon" />
+
         <img
           class="repeat_icon"
           src="./controls/repeat.png"
           alt="repeat_Icon"
         />
+
         <img
           class="repeat_one_icon hidden_repeat_one_Icon"
           src="./controls/repeat-one.png"
