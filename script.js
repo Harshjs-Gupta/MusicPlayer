@@ -1,6 +1,6 @@
 import { playList } from "./data.js";
 import { changeBackground } from "./backgroundChange.js";
-
+import musicControler from "./musicControler.js";
 // console.log(playList);
 // console.log(playList.map((t) => t.title).join(", "));
 
@@ -8,18 +8,17 @@ const downArrowBtn = document.querySelector(".dropDownArrow");
 const listSelector = document.querySelector(".selectorBox");
 const upArrowBtn = document.querySelector(".dropUpArrow");
 const titleModelBox = document.querySelector(".dropDown_model");
-const trackscontainer = document.querySelector(".tracks_title");
 const closeModel = document.querySelector(".overlay");
 
 const displayTracksList = function (item) {
-  const html = `<div class="tracks_title" title="${item.title}" id="${item.id}" url="${item.url}" author="${item.author}" author_link="${item.author_link}" >${item.title}</div>`;
+  const html = `<div class="tracks_title" title="${item.title}" id="${item.id}" url="${item.url}"  author_link="${item.author_link}" >${item.title}</div>`;
   titleModelBox.insertAdjacentHTML("beforeend", html);
 };
 
 playList.forEach((item) => displayTracksList(item));
 
 // Track list model Box
-const musicList = function () {
+listSelector.addEventListener("click", function () {
   //   console.log("Hello");
   if (titleModelBox.classList.contains("hidden_dropdown")) {
     titleModelBox.classList.remove("hidden_dropdown");
@@ -33,8 +32,7 @@ const musicList = function () {
     downArrowBtn.classList.remove("hidden_down_Icon");
     upArrowBtn.classList.add("hidden_Up_Icon");
   }
-};
-listSelector.addEventListener("click", musicList);
+});
 
 // Setting radio model Box
 const settingBtn = document.querySelector(".setting_icon");
@@ -114,81 +112,13 @@ const allImg = [
 
 allImg.forEach((image) => changeBackground(image));
 
-// music control
-document.addEventListener("DOMContentLoaded", function () {
-  // Select audio element
-  const audio = document.querySelector("audio");
+// const tracksName = document.querySelectorAll(".tracks_title");
+// const source = document.querySelector(".source");
 
-  // Select play and pause buttons
-  const playButton = document.querySelector(".play_icon");
-  const pauseButton = document.querySelector(".pause_icon");
-
-  // Select volume and mute buttons
-  const volumeButton = document.querySelector(".volume_icon");
-  const muteButton = document.querySelector(".mute_icon");
-
-  // Repeat Button
-  const repeatButton = document.querySelector(".repeat_icon");
-  const repeatOneButton = document.querySelector(".repeat_one_icon");
-
-  // Play button click event
-  playButton.addEventListener("click", function () {
-    audio.play();
-    playButton.classList.add("hidden_play_Icon");
-    pauseButton.classList.remove("hidden_pause_Icon");
-  });
-
-  // Pause button click event
-  pauseButton.addEventListener("click", function () {
-    audio.pause();
-    playButton.classList.remove("hidden_play_Icon");
-    pauseButton.classList.add("hidden_pause_Icon");
-  });
-
-  // Volume button click event
-  volumeButton.addEventListener("click", function () {
-    audio.muted = true;
-    volumeButton.classList.add("volume_hidden");
-    muteButton.classList.remove("mute_hidden");
-  });
-
-  // Mute button click event
-  muteButton.addEventListener("click", function () {
-    audio.muted = false;
-    volumeButton.classList.remove("volume_hidden");
-    muteButton.classList.add("mute_hidden");
-  });
-
-  // Volume range slider event
-  const volumeSlider = document.querySelector("#range");
-  volumeSlider.addEventListener("input", function () {
-    audio.volume = volumeSlider.value / 100;
-
-    if (audio.volume === 0) {
-      volumeButton.classList.add("volume_hidden");
-      muteButton.classList.remove("mute_hidden");
-    } else {
-      volumeButton.classList.remove("volume_hidden");
-      muteButton.classList.add("mute_hidden");
-    }
-  });
-
-  // Event listener for when audio ends
-  audio.addEventListener("ended", function () {
-    playButton.classList.remove("hidden_play_Icon");
-    pauseButton.classList.add("hidden_pause_Icon");
-  });
-
-  // repeat music
-  repeatButton.addEventListener("click", function () {
-    audio.loop = true;
-    repeatButton.classList.add("hidden_repeat_Icon");
-    repeatOneButton.classList.remove("hidden_repeat_one_Icon");
-  });
-
-  repeatOneButton.addEventListener("click", function () {
-    audio.loop = false;
-    repeatButton.classList.remove("hidden_repeat_Icon");
-    repeatOneButton.classList.add("hidden_repeat_one_Icon");
-  });
-});
+// tracksName.forEach((track) => {
+//   track.addEventListener("click", function () {
+//     const nameOfSong = track.getAttribute("url");
+//     console.log(nameOfSong);
+//     source.setAttribute("src", nameOfSong);
+//   });
+// });
