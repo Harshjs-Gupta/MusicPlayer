@@ -134,10 +134,18 @@ body {
   color: rgb(172, 178, 255);
 }
 
-/* @media (max-width: 700px) {
+/* Media Query */
+
+@media (max-width: 700px) {
   body {
     overflow: hidden;
+    position: relative;
   }
+
+  #background_img_comtainer {
+    overflow: hidden;
+  }
+
   #Left_header {
     height: 80px;
     width: 150px;
@@ -155,16 +163,17 @@ body {
   }
 
   .dropDown_model {
-    height: calc(-200px + 100dvh);
-    width: 400px;
-    position: absolute;
-    top: 50px;
-    left: 10px;
+    width: 100%;
+    margin-top: 80px;
     padding: 10px 20px 10px 20px;
-    margin-top: 20px;
+    margin-top: 80px;
     column-count: 2;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .dropUpArrow {
@@ -177,7 +186,13 @@ body {
   .select_name {
     display: none;
   }
-} */
+  .setting_model_box {
+    z-index: 1;
+  }
+  /* .about_model_box {
+    z-index: 1;
+  } */
+}
 
 #Right_header {
   height: 80px;
@@ -653,12 +668,13 @@ body {
   }
 
   .volume_icon {
+    margin-right: 10px;
     margin-left: 20px;
-    margin-right: 0px;
   }
 
   .mute_icon {
-    margin-right: 0px;
+    margin-right: 10px;
+    margin-left: 20px;
   }
 
   #range {
@@ -666,6 +682,7 @@ body {
   }
 
   #recent_icon {
-    margin-right: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
