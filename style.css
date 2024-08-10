@@ -558,13 +558,14 @@ body {
   display: none;
 }
 
-/* @media (max-width: 700px) {
+@media (max-width: 700px) {
   #center_body {
     display: block;
   }
   body {
     font-family: "Montserrat";
     overflow: hidden;
+    position: relative;
   }
   #Left_header {
     height: 80px;
@@ -585,14 +586,12 @@ body {
     display: none;
   }
 
-
   .dropUpArrow {
     height: 20px;
     position: absolute;
     margin-top: 0;
     margin-left: 50px;
   }
-
 
   h1 {
     font-size: 40px;
@@ -617,7 +616,7 @@ body {
     cursor: pointer;
     margin-right: 70px;
   }
-  .pauseIcon2 {
+  .pause_icon {
     height: 60px;
     cursor: pointer;
     margin-right: 70px;
@@ -627,7 +626,7 @@ body {
     display: none;
   }
 
-  .playIcon2 {
+  .play_icon {
     height: 60px;
     cursor: pointer;
     margin-right: 70px;
@@ -655,11 +654,11 @@ body {
 
   .volume_icon {
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 0px;
   }
 
   .mute_icon {
-    margin-right: 20px;
+    margin-right: 0px;
   }
 
   #range {
@@ -669,4 +668,4 @@ body {
   #recent_icon {
     margin-right: 40px;
   }
-} */
+}
