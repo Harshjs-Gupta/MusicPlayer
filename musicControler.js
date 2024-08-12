@@ -6,6 +6,8 @@ export default function controler() {
     const audio = document.querySelector("audio");
 
     // Select play and pause buttons
+    const footerPlayButton = document.querySelector(".footer_play_icon");
+    const footerPauseButton = document.querySelector(".footer_pause_icon");
     const playButton = document.querySelector(".play_icon");
     const pauseButton = document.querySelector(".pause_icon");
 
@@ -21,40 +23,30 @@ export default function controler() {
     const volumeSlider = document.querySelector("#range");
 
     // Play button click event
-    // playButton.addEventListener("click", function () {
-    //    audio.play();
-    //   playButton.classList.add("hidden_play_Icon");
-    //   pauseButton.classList.remove("hidden_pause_Icon");
+    playButton.addEventListener("click", function () {
+      console.log("hello");
+      audio.play();
+      playButton.classList.add("hidden_play_Icon");
+      pauseButton.classList.remove("hidden_pause_Icon");
+    });
 
-    // });
+    pauseButton.addEventListener("click", function () {
+      audio.pause();
+      playButton.classList.remove("hidden_play_Icon");
+      pauseButton.classList.add("hidden_pause_Icon");
+    });
 
-    // // Pause button click event
-    // pauseButton.addEventListener("click", function () {
-    //   audio.pause();
-    //   playButton.classList.remove("hidden_play_Icon");
-    //   pauseButton.classList.add("hidden_pause_Icon");
-    // });
+    footerPlayButton.addEventListener("click", function () {
+      audio.play();
+      footerPlayButton.classList.add("hidden_play_Icon");
+      footerPauseButton.classList.remove("hidden_pause_Icon");
+    });
 
-    function togglePlayPause() {
-      if (audio.paused) {
-        audio.play();
-        playButton.classList.add("hidden_play_Icon");
-        pauseButton.classList.remove("hidden_pause_Icon");
-      } else {
-        audio.pause();
-        playButton.classList.remove("hidden_play_Icon");
-        pauseButton.classList.add("hidden_pause_Icon");
-      }
-    }
-
-    playButton.addEventListener("click", togglePlayPause);
-    pauseButton.addEventListener("click", togglePlayPause);
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === " ") {
-        event.preventDefault();
-        togglePlayPause();
-      }
+    // Footer pause button click event
+    footerPauseButton.addEventListener("click", function () {
+      audio.pause();
+      footerPlayButton.classList.remove("hidden_play_Icon");
+      footerPauseButton.classList.add("hidden_pause_Icon");
     });
 
     // Volume button click event
