@@ -114,11 +114,17 @@ allImg.forEach((image) => changeBackground(image));
 
 // const tracksName = document.querySelectorAll(".tracks_title");
 // const source = document.querySelector(".source");
+// const nameOfSong = document.querySelector(".recent_play");
 
 // tracksName.forEach((track) => {
 //   track.addEventListener("click", function () {
-//     const nameOfSong = track.getAttribute("url");
-//     console.log(nameOfSong);
-//     source.setAttribute("src", nameOfSong);
+//     const song = track.getAttribute("url");
+//     const songName = track.getAttribute("title");
+//     console.log(song);
+//     console.log(songName);
+//     source.setAttribute("src", song);
+
+//     // Update name of song
+//     // nameOfSong.textContent = songName;
 //   });
 // });
