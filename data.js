@@ -2,14 +2,14 @@ export const playList = [
   {
     title: "Ambient",
     id: 142276242,
-    url: "https://soundcloud.com/stan-kraus/sets/ambient",
+    url: "./Music/Ambient.mp3",
     author: "Stan Kraus",
     author_link: "https://soundcloud.com/stan-kraus",
   },
   {
     title: "Lo-Fi",
     id: 508749267,
-    url: "https://soundcloud.com/epigenes1s/sets/lo-fi",
+    url: "./Music/music.mp3",
     author: "Epigenesis",
     author_link: "https://soundcloud.com/epigenes1s",
   },
